@@ -1,0 +1,9 @@
+body {
+  background: turquoise;
+}
+
+.container {
+  background: white;
+  display: flex;
+  flex-direction: row;
+}
