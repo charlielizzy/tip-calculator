@@ -3,6 +3,8 @@ let totalTip;
 let totalPeople = 1;
 let tipPerPerson;
 let billPerPerson;
+const tipHTMLElement = document.getElementById("tip-pp");
+const billHTMLElement = document.getElementById("total-pp");
 
 const validateInput = (totalBill, totalTip, totalPeople) => {
   return (
@@ -16,8 +18,6 @@ const billAmount = document.getElementById("bill-amount");
 billAmount.addEventListener("input", (event) => {
   totalBill = Number(event.target.value);
   if (validateInput(totalBill, totalTip, totalPeople) === true) {
-    const tipHTMLElement = document.getElementById("tip-pp");
-    const billHTMLElement = document.getElementById("total-pp");
     tipPerPerson = calculateTipPerPerson(totalBill, totalTip, totalPeople);
     billPerPerson = calculateBillPerPerson(totalBill, totalTip, totalPeople);
     tipHTMLElement.innerText = `$${tipPerPerson.toFixed(2)}`;
@@ -30,8 +30,6 @@ tipButtons.forEach((tipbutton) => {
   tipbutton.addEventListener("click", (event) => {
     totalTip = Number(event.target.value);
     if (validateInput(totalBill, totalTip, totalPeople) === true) {
-      const tipHTMLElement = document.getElementById("tip-pp");
-      const billHTMLElement = document.getElementById("total-pp");
       tipPerPerson = calculateTipPerPerson(totalBill, totalTip, totalPeople);
       billPerPerson = calculateBillPerPerson(totalBill, totalTip, totalPeople);
       tipHTMLElement.innerText = `$${tipPerPerson.toFixed(2)}`;
@@ -44,8 +42,6 @@ const numberOfPeople = document.getElementById("number-of-people");
 numberOfPeople.addEventListener("change", (event) => {
   totalPeople = Number(event.target.value);
   if (validateInput(totalBill, totalTip, totalPeople) === true) {
-    const tipHTMLElement = document.getElementById("tip-pp");
-    const billHTMLElement = document.getElementById("total-pp");
     tipPerPerson = calculateTipPerPerson(totalBill, totalTip, totalPeople);
     billPerPerson = calculateBillPerPerson(totalBill, totalTip, totalPeople);
     tipHTMLElement.innerText = `$${tipPerPerson.toFixed(2)}`;
@@ -58,5 +54,11 @@ const calculateTipPerPerson = (bill, tip, people) => {
 };
 
 const calculateBillPerPerson = (bill, tip, people) => {
-  return (bill + tip) / people;
+  return (bill + bill * tip) / people;
 };
+
+const resetButton = document.getElementById("reset");
+resetButton.addEventListener("click", () => {
+  tipHTMLElement.innerText = "";
+  billHTMLElement.innerText = "";
+});
