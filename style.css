@@ -18,9 +18,13 @@ body {
 
 .turq-font {
   color: hsl(172, 67%, 45%);
+  font-size: 38px;
 }
 
 .right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: #00474b;
   width: 333px;
   height: 337px;
@@ -33,6 +37,7 @@ body {
   width: 379px;
   height: 388px;
   margin: 48px;
+  align-items: space-around;
 }
 
 .reset {
@@ -47,4 +52,5 @@ body {
 .bill-calc-section {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
