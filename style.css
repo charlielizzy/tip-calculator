@@ -1,9 +1,50 @@
 body {
-  background: turquoise;
+  background: hsl(172, 67%, 80%);
+  font-family: "Space Mono", monospace;
 }
 
 .container {
   background: white;
   display: flex;
   flex-direction: row;
+  width: 920px;
+  height: 481px;
+  border-radius: 25px;
+}
+
+.white-font {
+  color: white;
+}
+
+.turq-font {
+  color: hsl(172, 67%, 45%);
+}
+
+.right-side {
+  background: #00474b;
+  width: 333px;
+  height: 337px;
+  border-radius: 15px;
+  margin: 32px;
+  padding: 40px;
+}
+
+.left-side {
+  width: 379px;
+  height: 388px;
+  margin: 48px;
+}
+
+.reset {
+  background-color: hsl(172, 67%, 45%);
+  width: 333px;
+  height: 48px;
+  color: #00474b;
+  border-radius: 5px;
+}
+
+.tip-calc-section,
+.bill-calc-section {
+  display: flex;
+  justify-content: space-between;
 }

@@ -6,21 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 <div id="container" class="container">
-    <div id="left-side">
+    <div class="left-side">
         <div id="bill-amount">
             <p>Bill</p>
             <input type="number" id="bill-input"/>
         </div>
         <div id="tip-percentage">
         <p>Select tip %</p>
-        <input type="radio" id="5" class="tip-button" name="tip-amounts" value="0.05"><label for="5">5%</label>
-        <input type="radio" id="10" class="tip-button" name="tip-amounts" value="0.1"><label for="10">10%</label>
-        <input type="radio" id="15" class="tip-button" name="tip-amounts" value="0.15"><label for="15">15%</label>
-        <input type="radio" id="25" class="tip-button" name="tip-amounts" value="0.25"><label for="25">25%</label>
-        <input type="radio" id="50" class="tip-button" name="tip-amounts" value="0.5"><label for="50">50%</label>
+        <input type="radio" id="5" class="tip-button" name="tip-amounts" value="0.05"><label for="5" >5%</label>
+        <input type="radio" id="10" class="tip-button" name="tip-amounts" value="0.1"><label for="10" >10%</label>
+        <input type="radio" id="15" class="tip-button" name="tip-amounts" value="0.15"><label for="15" >15%</label>
+        <input type="radio" id="25" class="tip-button" name="tip-amounts" value="0.25"><label for="25" >25%</label>
+        <input type="radio" id="50" class="tip-button" name="tip-amounts" value="0.5"><label for="50" >50%</label>
         </div>
         <div id="number-of-people">
             <p>Number of people</p>
@@ -36,12 +39,20 @@
             </select>
         </div>
 </div>
-<div id="right-side">
-       <div><p>Tip amount /person</p><p id="tip-pp">$</p></div> 
-       <div><p>Bill amount /person</p><p id="total-pp">$</p></div>
+<div class="right-side">
+    <div class="tip-calc-section">
+        <div><p class="white-font">Tip amount /person</p></div>
+        <div><p id="tip-pp" class="turq-font">$</p></div> 
+    </div>
+
+    <div class="bill-calc-section">
+           <div><p class="white-font">Bill amount /person</p></div>
+           <div><p id="total-pp" class="turq-font">$</p></div>
+     </div>
+       
        <div id="reset-button">
-           <button type="button" id="reset">Reset</button>
-       </div>
+           <button type="button" id="reset" class="reset">Reset</button>
+    </div>
 </div>
 </div>
 
