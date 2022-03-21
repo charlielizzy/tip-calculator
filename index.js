@@ -59,6 +59,5 @@ const calculateBillPerPerson = (bill, tip, people) => {
 
 const resetButton = document.getElementById("reset");
 resetButton.addEventListener("click", () => {
-  tipHTMLElement.innerText = "";
-  billHTMLElement.innerText = "";
+  location.reload();
 });
