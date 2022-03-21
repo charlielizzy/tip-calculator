@@ -8,9 +8,9 @@ const billHTMLElement = document.getElementById("total-pp");
 
 const validateInput = (totalBill, totalTip, totalPeople) => {
   return (
-    typeof totalBill !== undefined &&
-    typeof totalTip !== undefined &&
-    typeof totalPeople !== undefined
+    typeof totalBill !== "undefined" &&
+    typeof totalTip !== "undefined" &&
+    typeof totalPeople !== "undefined"
   );
 };
 
